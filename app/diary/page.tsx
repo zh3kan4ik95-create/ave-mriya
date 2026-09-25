@@ -48,6 +48,22 @@ const notes = [
     text: 'Залишається менше 100 годин до партнерки.',
     metric: '3 919 / 4 000 годин перегляду - 97%',
   },
+  {
+    date: '17.08.26',
+    text: 'Набрав потрібну кількість годин. Подав на монетизацію.',
+  },
+  {
+    date: '30.08.26',
+    kind: 'monthly',
+    text: 'Підсумок місяця: зібрано 3,8% від цілі - 1690 UAH.',
+  },
+  {
+    date: '30.08.26',
+    kind: 'stats',
+    text: 'Підсумок місяця. Статистика.',
+    metric: 'Опубліковано 17 відео: 3 горизонтальних і 14 вертикальних.',
+    stats: ['22 233 перегляди', '🌎 Аудиторія: 5284 (+70 за місяць)'],
+  },
 ];
 
 export default function DiaryPage() {
@@ -73,7 +89,8 @@ export default function DiaryPage() {
                 return (
                   <Reveal key={note.date} className="relative pl-11">
                     <span className="absolute left-0 top-2 h-6 w-6 rounded-full border border-[#7ED957]/40 bg-white shadow-[0_0_0_8px_rgba(126,217,87,0.08)]" />
-                    <article className="max-w-2xl">
+                    <article className={`max-w-2xl ${note.kind === 'monthly' ? 'rounded-[1.5rem] border border-[#cfeec3] bg-[#f5fff1] p-6 md:p-8' : note.kind === 'stats' ? 'rounded-[1.5rem] border border-[#e7e0c9] bg-[#fffdf5] p-6 md:p-8' : ''}`}>
+                      {note.kind && <p className="text-[11px] uppercase tracking-[.2em] text-[#58ad3f]">{note.kind === 'monthly' ? 'Підсумок місяця' : 'Статистика місяця'}</p>}
                       <p className="text-xs uppercase tracking-[.22em] text-[#58ad3f]">{note.date}</p>
                       <p className="mt-5 text-xl leading-relaxed tracking-[-.025em] text-black/72 md:text-2xl">
                         {note.text}
@@ -103,6 +120,12 @@ export default function DiaryPage() {
                         <div className="mt-7 max-w-xl rounded-[1.25rem] border border-[#cfeec3] bg-[#f5fff1] px-5 py-4">
                           <p className="text-[11px] uppercase tracking-[.18em] text-[#58ad3f]">Прогрес</p>
                           <p className="mt-2 text-sm font-medium text-black/65">{note.metric}</p>
+                        </div>
+                      )}
+
+                      {note.stats && (
+                        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                          {note.stats.map((stat) => <p key={stat} className="rounded-xl bg-white/70 px-4 py-3 text-sm font-medium text-black/65">{stat}</p>)}
                         </div>
                       )}
 
