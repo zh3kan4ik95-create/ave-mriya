@@ -1,6 +1,6 @@
 {
   "goal": 45000,
-  "raised": 1200,
+  "raised": 4807,
   "story": {
     "title": "Чому з'явився проєкт Ave Mriya?",
     "paragraphs": [
@@ -16,7 +16,8 @@
   "products": "Готові інструменти, які допоможуть вам і підтримають проєкт.",
   "supporters": [
     { "name": "О.", "amount": 780, "source": "через продукт", "color": "#eefbe9" },
-    { "name": "Ю.", "amount": 420, "source": "через продукт", "color": "#f3faee" }
+    { "name": "Ю.", "amount": 420, "source": "через продукт", "color": "#f3faee" },
+    { "name": "М", "amount": 4800, "source": "через продукт", "color": "#e8f7e1" }
   ],
   "timeline": [
     { "title": "Запуск сайту", "date": "04.08.26" },
@@ -28,7 +29,7 @@
     { "title": "Перший місяць життя лише завдяки YouTube" }
   ],
   "video": {
-    "url": "https://www.youtube.com/embed/qqj1-f95hYc?si=s7Ixa18--YgNXZAk",
+    "url": "https://www.youtube.com/embed/Dxg2SR36Ntk?si=9TXAI0h4gjgPdNQ9",
     "title": "Останнє відео Ave Mriya"
   }
 }
