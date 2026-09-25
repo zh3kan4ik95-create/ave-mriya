@@ -5,6 +5,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Ave Mriya - Road to the Dream',
   description: 'Публічний шлях до мрії.',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
